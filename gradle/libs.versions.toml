@@ -2,7 +2,7 @@
 agp = "8.5.1"
 androidxHiltLifecycleViewmodel = "1.0.0-alpha03"
 constraintlayoutCompose = "1.0.1"
-hiltAndroid = "2.44"
+hiltAndroid = "2.51.1"
 hiltCompiler = "1.2.0"
 kotlin = "1.9.0"
 coreKtx = "1.13.1"
