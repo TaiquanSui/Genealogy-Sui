@@ -2,30 +2,12 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "f10f7fb3b2620f9921b41a9c157ab017",
+    "identityHash": "2bdea04133ea61df1c5d495511211799",
     "entities": [
       {
         "tableName": "sui",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `first_name` TEXT NOT NULL, `last_name` TEXT NOT NULL, `generation` INTEGER NOT NULL, `relation` INTEGER NOT NULL, `relationType` TEXT NOT NULL, `rank` INTEGER NOT NULL, `introduction` TEXT NOT NULL, `note` TEXT NOT NULL)",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`generation` INTEGER NOT NULL, `id` TEXT NOT NULL, `firstName` TEXT NOT NULL, `idSuperior` TEXT NOT NULL, `idMother` TEXT NOT NULL, `relationSuperiorType` TEXT NOT NULL, `rank` INTEGER NOT NULL, `residencePlace` TEXT NOT NULL, `birthday` TEXT NOT NULL, `death` TEXT NOT NULL, `noteOfDeath` TEXT NOT NULL, `burialPlace` TEXT NOT NULL, `alias` TEXT NOT NULL, `profession` TEXT NOT NULL, `personalInformation` TEXT NOT NULL, `introduction` TEXT NOT NULL, `note` TEXT NOT NULL, PRIMARY KEY(`id`))",
         "fields": [
-          {
-            "fieldPath": "id",
-            "columnName": "id",
-            "affinity": "INTEGER",
-            "notNull": true
-          },
-          {
-            "fieldPath": "firstName",
-            "columnName": "first_name",
-            "affinity": "TEXT",
-            "notNull": true
-          },
-          {
-            "fieldPath": "lastName",
-            "columnName": "last_name",
-            "affinity": "TEXT",
-            "notNull": true
-          },
           {
             "fieldPath": "generation",
             "columnName": "generation",
@@ -33,14 +15,32 @@
             "notNull": true
           },
           {
-            "fieldPath": "relation",
-            "columnName": "relation",
-            "affinity": "INTEGER",
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
             "notNull": true
           },
           {
-            "fieldPath": "relationType",
-            "columnName": "relationType",
+            "fieldPath": "firstName",
+            "columnName": "firstName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "idSuperior",
+            "columnName": "idSuperior",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "idMother",
+            "columnName": "idMother",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "relationSuperiorType",
+            "columnName": "relationSuperiorType",
             "affinity": "TEXT",
             "notNull": true
           },
@@ -48,6 +48,54 @@
             "fieldPath": "rank",
             "columnName": "rank",
             "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "residencePlace",
+            "columnName": "residencePlace",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "birthday",
+            "columnName": "birthday",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "death",
+            "columnName": "death",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "noteOfDeath",
+            "columnName": "noteOfDeath",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "burialPlace",
+            "columnName": "burialPlace",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "alias",
+            "columnName": "alias",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "profession",
+            "columnName": "profession",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "personalInformation",
+            "columnName": "personalInformation",
+            "affinity": "TEXT",
             "notNull": true
           },
           {
@@ -64,7 +112,7 @@
           }
         ],
         "primaryKey": {
-          "autoGenerate": true,
+          "autoGenerate": false,
           "columnNames": [
             "id"
           ]
@@ -76,7 +124,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'f10f7fb3b2620f9921b41a9c157ab017')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '2bdea04133ea61df1c5d495511211799')"
     ]
   }
 }

@@ -60,6 +60,7 @@ android {
 
 dependencies {
 
+    implementation (libs.kotlin.stdlib)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -67,6 +68,7 @@ dependencies {
     implementation(libs.androidx.ui)
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
+    implementation (libs.androidx.material)
     implementation(libs.androidx.material3)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
@@ -75,12 +77,18 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+    implementation (libs.androidx.foundation)
+    implementation (libs.androidx.runtime)
 
+    implementation(libs.androidx.core.splashscreen)
+
+//    implementation (libs.androidx.lifecycle.livedata.ktx)
 
     implementation(libs.hilt.android)
     kapt(libs.hilt.android.compiler)
-//    implementation (libs.androidx.hilt.lifecycle.viewmodel)
 //    kapt (libs.androidx.hilt.compiler)
+    implementation (libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.androidx.hilt.navigation.compose)
 
     implementation(libs.androidx.navigation.compose)
     implementation(libs.androidx.lifecycle.runtime.compose)
@@ -90,12 +98,12 @@ dependencies {
     kapt(libs.androidx.room.compiler)
     implementation(libs.androidx.room.ktx)
 
-    // Optional - Integration with activities
+    //Optional - Integration with activities
     implementation(libs.androidx.activity.compose)
     // Optional - Integration with ViewModels
     implementation(libs.androidx.lifecycle.viewmodel.compose)
-    // Optional - Integration with LiveData
-    implementation(libs.androidx.runtime.livedata)
+//    // Optional - Integration with LiveData
+//    implementation(libs.androidx.runtime.livedata)
     // Optional - Integration with RxJava
     implementation(libs.androidx.runtime.rxjava2)
 
