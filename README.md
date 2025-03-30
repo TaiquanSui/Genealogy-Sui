@@ -25,19 +25,21 @@ An Android application designed for managing and displaying family genealogy inf
   - Navigation Component
 
 ## Project Structure 
+```
 app/src/main/
 ├── java/com/example/sui/
-│ ├── feature/
-│ │ ├── data/ # Data Layer
-│ │ │ ├── datasource/ # Data Sources
-│ │ │ ├── repository/ # Repositories
-│ │ │ └── util/ # Utilities
-│ │ ├── domain/ # Domain Layer
-│ │ │ ├── model/ # Models
-│ │ │ └── use_case/ # Use Cases
-│ │ ├── di/ # Dependency Injection
-│ │ └── ui/ # UI Layer
-└── res/ # Resources
+│   ├── feature/
+│   │   ├── data/           # Data Layer
+│   │   │   ├── datasource/ # Data Sources
+│   │   │   ├── repository/ # Repositories
+│   │   │   └── util/       # Utilities
+│   │   ├── domain/         # Domain Layer
+│   │   │   ├── model/      # Models
+│   │   │   └── use_case/   # Use Cases
+│   │   ├── di/             # Dependency Injection
+│   │   └── ui/             # UI Layer
+└── res/                    # Resources
+```
 
 
 ## Core Features
